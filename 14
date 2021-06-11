@@ -1,0 +1,39 @@
+используя  Систему ;
+
+пространство имен  Console_13
+{
+    публичный  делегат  int  Number ();
+    публичный  делегат  int  MediumCalc ( Number [] arrayX );
+    класс  Prog13
+    {
+        public  static  int  Randomizer ()
+        {
+            Случайный  ранд  =  новый  Случайный ();
+            вернуть  ранд . Далее ( 1 , 10 );
+        }
+        static  void  Main ( строка [] аргументы )
+        {
+            Число [] numArr  =  новое  число [ 5 ];
+            for ( int  i  =  0 ; i  <  numArr . Length ; i ++ )
+            {
+                numArr [ i ] =  Рандомайзер ;
+                Консоль . Write ( "  "  +  numArr [ i ]. Invoke () +  "  " );
+            }
+            Консоль . WriteLine ();
+                
+            MediumCalc  mediumCalc  =  делегат ( Number [] arrayX )
+            {
+                int  sum  =  0 ;
+                for ( int  i  =  0 ; i  <  arrayX . Length ; i ++ )
+                {
+                    сумма  + =  arrayX [ я ] ();
+                }
+                return (( сумма ) / ( arrayX . Длина ));
+            };
+
+            Консоль . WriteLine ( mediumCalc ( numArr ));
+
+            Консоль . ReadKey ();
+        }
+    }
+}
